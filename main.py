@@ -607,6 +607,8 @@ class WorkspaceWidget(QWidget):
         self.room_canvas.message.connect(self._set_status)
         self.room_canvas.rightClickExit.connect(lambda: self.edit_button.setChecked(False))
         self.plan_canvas.roomActivated.connect(self._open_room)
+        # «Дверь» на развертке комнаты — переход к следующей комнате.
+        self.room_canvas.set_rooms_total(len((self.apartment or {}).get("rooms", [])))
         self.library_panel.toolSelected.connect(self._set_tool)
         self.properties_panel.applyRequested.connect(self._apply_element_properties)
         self.properties_panel.deleteRequested.connect(self._delete_element)
@@ -727,6 +729,14 @@ class WorkspaceWidget(QWidget):
         self.grid_step.setMaximumWidth(84)
         layout.addWidget(self.grid_step)
         return frame
+
+    def _set_mode_state(self) -> None:
+        """Синхронизирует состояние панелей и холста с текущим режимом."""
+        self._apply_visibility()
+        self.room_canvas.set_mode(self.edit_mode, self.active_layer)
+        self.room_canvas.set_tool(self.active_tool)
+        self._update_grid_options()
+        self._refresh_library()
 
     def _toggle_layer(self, layer: str, checked: bool) -> None:
         if layer == ROOM_LAYER:
@@ -850,6 +860,7 @@ class WorkspaceWidget(QWidget):
 
     def _refresh_rooms_combo(self, select_id: str | None = None) -> None:
         self.apartment = self.store.get_apartment(self.apartment_id)
+        self.room_canvas.set_rooms_total(len((self.apartment or {}).get("rooms", [])))
         self.room_combo.blockSignals(True)
         self.room_combo.clear()
         rooms = (self.apartment or {}).get("rooms", [])
@@ -1199,6 +1210,10 @@ class WorkspaceWidget(QWidget):
 
     def _set_status(self, text: str) -> None:
         self.status_label.setText(text)
+
+    def _on_canvas_message(self, text: str) -> None:
+        """Сообщения холста (подсказки инструментов, undo/redo) дублируются в статус-бар."""
+        self._set_status(text)
 
     def set_apartment(self, apartment_id: str, room_id: str | None = None) -> None:
         self.apartment_id = apartment_id

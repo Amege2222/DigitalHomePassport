@@ -12,6 +12,36 @@
           "width": 4.0,
           "depth": 3.0,
           "height": 2.7,
+          "description": "",
+          "elements": [
+            {
+              "name": "Провод",
+              "kind": "wire",
+              "layer": "electricity",
+              "wall": "north",
+              "start": {
+                "x": 2.782,
+                "y": 1.9500000000000002,
+                "z": 0.0
+              },
+              "end": {
+                "x": 2.106,
+                "y": 2.36787,
+                "z": 0.0
+              },
+              "description": "",
+              "install_date": "",
+              "removal_date": "",
+              "status": "Видимый",
+              "routing": "Открытая",
+              "voltage": 0.0,
+              "diameter": 0.0,
+              "material": "",
+              "connections": [],
+              "id": "a5fd596263d84d8f95f2a15abb2fa9c4"
+            }
+          ],
+          "wall_properties": {},
           "communications": {
             "Электричество": [
               [
@@ -51,7 +81,11 @@
             ],
             "Вода": [],
             "Интернет": []
-          }
+          },
+          "migrated_layers": [
+            "electricity",
+            "water"
+          ]
         },
         {
           "id": "9edec1d0c70242629132795dda815e30",
@@ -59,6 +93,36 @@
           "width": 3.4,
           "depth": 100.0,
           "height": 2.7,
+          "description": "",
+          "elements": [
+            {
+              "name": "Провод",
+              "kind": "wire",
+              "layer": "electricity",
+              "wall": "north",
+              "start": {
+                "x": 3.17736,
+                "y": 0.7722300000000001,
+                "z": 0.0
+              },
+              "end": {
+                "x": 0.83396,
+                "y": 2.23584,
+                "z": 0.0
+              },
+              "description": "",
+              "install_date": "",
+              "removal_date": "",
+              "status": "Видимый",
+              "routing": "Открытая",
+              "voltage": 0.0,
+              "diameter": 0.0,
+              "material": "",
+              "connections": [],
+              "id": "64184b5cba3f449ca81501b6c387a2ad"
+            }
+          ],
+          "wall_properties": {},
           "communications": {
             "Электричество": [
               [
@@ -74,7 +138,11 @@
             ],
             "Вода": [],
             "Интернет": []
-          }
+          },
+          "migrated_layers": [
+            "electricity",
+            "water"
+          ]
         },
         {
           "id": "dde12b9e4c714fd2a2aa01036d40fd60",
@@ -82,11 +150,18 @@
           "width": 4.0,
           "depth": 4.0,
           "height": 4.0,
+          "description": "",
+          "elements": [],
+          "wall_properties": {},
           "communications": {
             "Электричество": [],
             "Вода": [],
             "Интернет": []
-          }
+          },
+          "migrated_layers": [
+            "electricity",
+            "water"
+          ]
         }
       ]
     },
@@ -102,6 +177,62 @@
           "width": 4.0,
           "depth": 3.0,
           "height": 2.7,
+          "description": "",
+          "elements": [
+            {
+              "name": "Провод",
+              "kind": "wire",
+              "layer": "electricity",
+              "wall": "north",
+              "start": {
+                "x": 2.1058,
+                "y": 2.11914,
+                "z": 0.0
+              },
+              "end": {
+                "x": 2.07628,
+                "y": 1.58673,
+                "z": 0.0
+              },
+              "description": "",
+              "install_date": "",
+              "removal_date": "",
+              "status": "Видимый",
+              "routing": "Открытая",
+              "voltage": 0.0,
+              "diameter": 0.0,
+              "material": "",
+              "connections": [],
+              "id": "d95dce83a8b94c04b5cb5e74197d730d"
+            },
+            {
+              "name": "Провод",
+              "kind": "wire",
+              "layer": "electricity",
+              "wall": "north",
+              "start": {
+                "x": 1.90896,
+                "y": 0.93831,
+                "z": 0.0
+              },
+              "end": {
+                "x": 1.90896,
+                "y": 1.40748,
+                "z": 0.0
+              },
+              "description": "",
+              "install_date": "",
+              "removal_date": "",
+              "status": "Видимый",
+              "routing": "Открытая",
+              "voltage": 0.0,
+              "diameter": 0.0,
+              "material": "",
+              "connections": [],
+              "id": "9a292cb78efe4f7d9d703f483f64b9d7"
+            }
+          ],
+          "wall_properties": {},
           "communications": {
             "Электричество": [
               [
@@ -139,7 +270,11 @@
                 ]
               ]
             ]
-          }
+          },
+          "migrated_layers": [
+            "electricity",
+            "water"
+          ]
         }
       ]
     },
