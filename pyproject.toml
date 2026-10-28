@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "canvas>=0.261.0",
     "pyqt6>=6.11.0",
 ]
 
